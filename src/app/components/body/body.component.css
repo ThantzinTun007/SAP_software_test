@@ -1,0 +1,36 @@
+.body {
+  width: 100%;
+  height: 100vh;
+  background: url('../../../assets/images/background-SAP.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bodyContainer{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bodyTextContainer{
+    width: 80%;
+    height: auto;
+    /* background-color: aquamarine; */
+}
+
+.bodyTextContainer h1{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.bodyTextContainer h4{
+    opacity: 0.8;
+    line-height: 35px;
+    margin-bottom: 25px;
+}
+

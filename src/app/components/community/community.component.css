@@ -1,0 +1,43 @@
+.menu {
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 50px 70px 30px;
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 330px;
+    z-index: 1000;
+  }
+
+  hr{
+    width: 150%;
+  }
+  
+  .menu-section {
+      margin-right: 50px;
+    }
+    
+    .menu-section h3 {
+      font-size: 14px;
+      color: #333;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    
+    .menu-section ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .menu-section li {
+      font-size: 13px;
+      margin-bottom: 15px;
+      color: #3a3939;
+      cursor: pointer;
+    }
+    
+    .menu-section li:hover {
+      text-decoration: underline;
+    }
+    

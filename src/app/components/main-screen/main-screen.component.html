@@ -1,5 +1,132 @@
 <!-- navbar -->
 
 <nav class="navbar">
-    
+  <div class="container d-flex justify-content-between">
+    <div class="logo_container">
+      <a href="/home" class="logo"></a>
+    </div>
+
+    <div class="menu_container">
+      <div class="front_menu_list" *ngIf="!isMobileView">
+        <span
+          class="menu_style"
+          [ngClass]="{ 'active-color': visibleSection === 'products' }"
+          (click)="toggleSection('products')"
+          >Products</span
+        >
+        <span
+          class="menu_style"
+          [ngClass]="{ 'active-color': visibleSection === 'support' }"
+          (click)="toggleSection('support')"
+          >Support</span
+        >
+        <span
+          class="menu_style"
+          [ngClass]="{ 'active-color': visibleSection === 'learning' }"
+          (click)="toggleSection('learning')"
+          >Learning</span
+        >
+        <span
+          class="menu_style"
+          [ngClass]="{ 'active-color': visibleSection === 'community' }"
+          (click)="toggleSection('community')"
+          >Community</span
+        >
+        <span
+          class="menu_style"
+          [ngClass]="{ 'active-color': visibleSection === 'partners' }"
+          (click)="toggleSection('partners')"
+          >Partners</span
+        >
+        <span
+          class="menu_style"
+          [ngClass]="{ 'active-color': visibleSection === 'about' }"
+          (click)="toggleSection('about')"
+          >About</span
+        >
+      </div>
+
+      <div class="back_menu_list_container" *ngIf="!isMobileView">
+        <div class="back_menu_list">
+          <span
+            class="menu_style"
+            [ngClass]="{ 'active-color': visibleSection === 'explore' }"
+            (click)="toggleSection('explore')"
+            >Explore SAP</span
+          >
+          <span class="menu_icon_style" (click)="toggleSearchSection('search')"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+          <span class="menu_icon_style"
+            ><i class="fa-regular fa-user"></i
+          ></span>
+          <span class="menu_icon_style"
+            ><i class="fa-solid fa-circle-info"></i
+          ></span>
+        </div>
+      </div>
+
+      <i
+        class="fa fa-bars hamburger_icon"
+        (click)="toggleSidebar()"
+        *ngIf="isMobileView && !isSidebarOpen"
+      ></i>
+    </div>
+  </div>
 </nav>
+
+<!-- for body -->
+<app-body> </app-body>
+
+<!-- for footer -->
+<app-footer></app-footer>
+
+<!-- for sidebar menu -->
+<div class="sidebar" [class.open]="isSidebarOpen">
+  <div class="sidebar_header">
+    <span>Menu</span>
+    <i class="fa fa-times close_icon" (click)="toggleSidebar()"></i>
+  </div>
+  <a href="#" class="sidebar_item">Products</a>
+  <a href="#" class="sidebar_item">Support</a>
+  <a href="#" class="sidebar_item">Learning</a>
+  <a href="#" class="sidebar_item">Community</a>
+  <a href="#" class="sidebar_item">Partners</a>
+  <a href="#" class="sidebar_item">About</a>
+  <a href="#" class="sidebar_item explore">Explore SAP</a>
+</div>
+
+<div *ngIf="visibleSection === 'products'">
+  <app-products-screen></app-products-screen>
+</div>
+
+<div *ngIf="visibleSection === 'support'">
+  <app-support></app-support>
+</div>
+
+<div *ngIf="visibleSection === 'learning'">
+  <app-learning></app-learning>
+</div>
+
+<div *ngIf="visibleSection === 'community'">
+  <app-community></app-community>
+</div>
+
+<div *ngIf="visibleSection === 'partners'">
+  <app-partners></app-partners>
+</div>
+
+<div *ngIf="visibleSection === 'about'">
+  <app-about></app-about>
+</div>
+
+<div *ngIf="visibleSection === 'explore'">
+  <app-explore></app-explore>
+</div>
+
+<div class="menu" *ngIf="isMenuOpen">
+  <div class="menu-section">
+    <input type="text" placeholder="Search" />
+    <i class="fa fa-times close_icon" (click)="togglesClose()"></i>
+  </div>
+</div>

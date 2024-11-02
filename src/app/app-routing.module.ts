@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainScreenComponent } from './components/main-screen/main-screen.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home_screen', pathMatch: 'full' },
-  { path: 'home_screen', component: MainScreenComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: MainScreenComponent },
 ];
 
 @NgModule({
