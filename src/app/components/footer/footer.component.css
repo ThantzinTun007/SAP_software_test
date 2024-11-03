@@ -121,3 +121,95 @@
   line-height: 30px;
   margin-bottom: 40px;
 }
+
+/* for card */
+.cardContainer {
+  width: 100%;
+  height: 80vh;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 48%;
+  height: 450px;
+  /* background-color: #0033cc; */
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.card-image {
+  width: 100%;
+  height: 250px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 15px 0 10px 0;
+  text-align: center;
+}
+
+.card-content hr {
+  border: none;
+  border-top: 1px solid #646464;
+  margin: 10px 0;
+}
+
+.card-content p {
+  color: #333;
+  font-size: 1em;
+  margin: 10px 0 20px 0;
+}
+
+.card-link {
+  color: #0033cc;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.card-link i {
+  margin-left: 5px;
+}
+
+
+.trustedTextContainer{
+    width: 100%;
+    height: 100vh;
+    background: url('../../../assets/images/world.avif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 50px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.secContainer{
+    width: 80%;
+    height: 500px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.secContainer h1{
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0px 0px 120px;
+}
