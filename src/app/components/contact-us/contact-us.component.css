@@ -1,0 +1,153 @@
+.contactUsContainer {
+  width: 100%;
+  height: 85vh;
+  background-color: #e9ecee;
+}
+
+
+
+.contactUsContainer .container {
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.frontPart {
+  width: 30%;
+  height: 60vh;
+  /* background-color: antiquewhite; */
+}
+
+.logo_container {
+  width: 9%;
+  height: 20%;
+}
+
+.logo {
+  width: 68px;
+  height: 34px;
+  background: url("../../../assets/images/SAP_logo.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutPhone {
+  width: 100%;
+  height: auto;
+  display: flex;
+  /* background-color: antiquewhite; */
+}
+
+.logoIcon {
+  width: 10%;
+  height: auto;
+  /* background-color: aqua; */
+}
+
+.logoIcon i {
+  font-size: 20px;
+}
+
+.phone {
+  width: 90%;
+  height: auto;
+
+  /* background-color: antiquewhite; */
+}
+
+.contactSmallText {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.phone .phoneNo {
+  font-size: 21px;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.phone .phoneNo:hover{
+    text-decoration: underline;
+}
+
+.contactSmallText2 {
+  font-size: 12px;
+}
+
+.contactSmallText2 a {
+  color: inherit;
+}
+.aboutHover{
+    font-size: 14px;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.aboutHover:hover{
+    text-decoration: underline;
+}
+
+.contactUsIcon{
+    width: 70%;
+    height: 35px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconContainer{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.backPart {
+  width: 64%;
+  height: 60vh;
+  /* background-color: rgb(8, 56, 56); */
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactUsColumn {
+  width: 20%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactUsColumn .columnHeader {
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.contactUsColumn a {
+  font-size: 14px;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+
+.contactUsColumn a:hover{
+    text-decoration: underline;
+}

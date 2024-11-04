@@ -16,6 +16,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ExploreComponent } from './components/explore/explore.component';
 import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ExploreComponent,
     BodyComponent,
     FooterComponent,
+    ContactUsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideClientHydration()],

@@ -75,6 +75,10 @@
   </div>
 </nav>
 
+<button class="fixed-button">
+  <i class="fa-regular fa-comments"></i>Contact Us
+</button>
+
 <!-- for body -->
 <app-body> </app-body>
 
@@ -93,7 +97,6 @@
   <a href="#" class="sidebar_item">Community</a>
   <a href="#" class="sidebar_item">Partners</a>
   <a href="#" class="sidebar_item">About</a>
-  <a href="#" class="sidebar_item explore">Explore SAP</a>
 </div>
 
 <div *ngIf="visibleSection === 'products'">
@@ -126,7 +129,10 @@
 
 <div class="menu" *ngIf="isMenuOpen">
   <div class="menu-section">
-    <input type="text" placeholder="Search" />
-    <i class="fa fa-times close_icon" (click)="togglesClose()"></i>
+    <div class="search-container">
+      <input type="text" placeholder="Search" />
+      <i class="fa fa-search search_icon"></i>
+      <i class="fa fa-times close_icon" (click)="togglesClose()"></i>
+    </div>
   </div>
 </div>
