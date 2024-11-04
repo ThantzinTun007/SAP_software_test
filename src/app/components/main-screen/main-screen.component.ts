@@ -16,8 +16,8 @@ export class MainScreenComponent implements OnInit {
   isMobileView: boolean = false;
   isSidebarOpen: boolean = false;
   isBrowser: boolean;
-  isMenuOpen: boolean = false; 
-
+  isMenuOpen: boolean = false;
+  isIconOpen: boolean = false;
   visibleSection: string | null = null;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
@@ -40,16 +40,20 @@ export class MainScreenComponent implements OnInit {
     this.isMobileView = !this.isMobileView;
   }
 
+  openIcon(): void {
+    this.isIconOpen = !this.isIconOpen;
+  }
+
   toggleSection(section: string) {
     this.visibleSection = this.visibleSection === section ? null : section; // Toggle visibility
   }
 
   toggleSearchSection(section: string) {
     this.visibleSection = section;
-    this.isMenuOpen = section === 'search'; 
+    this.isMenuOpen = section === 'search';
   }
 
   togglesClose() {
-    this.isMenuOpen =false;
+    this.isMenuOpen = false;
   }
 }

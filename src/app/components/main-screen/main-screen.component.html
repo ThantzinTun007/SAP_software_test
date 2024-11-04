@@ -57,7 +57,7 @@
           <span class="menu_icon_style" (click)="toggleSearchSection('search')"
             ><i class="fa-solid fa-magnifying-glass"></i
           ></span>
-          <span class="menu_icon_style"
+          <span class="menu_icon_style" (click)="openIcon()"
             ><i class="fa-regular fa-user"></i
           ></span>
           <span class="menu_icon_style"
@@ -97,6 +97,20 @@
   <a href="#" class="sidebar_item">Community</a>
   <a href="#" class="sidebar_item">Partners</a>
   <a href="#" class="sidebar_item">About</a>
+</div>
+
+<!-- for user icon -->
+<div class="icon-backdrop" *ngIf="isIconOpen" (click)="openIcon()"></div>
+<div class="icon-container" *ngIf="isIconOpen">
+  <div class="user-content">
+    <div class="icon-header-container">
+      <span class="close-btn" (click)="openIcon()">×</span>
+      <h2>Thank you for your interest in SAP</h2>
+    </div>
+    <hr />
+    <img src="/assets/logo/location.png" alt="" class="locationIcon">
+    <p>This offering is currently not available in your region.</p>
+  </div>
 </div>
 
 <div *ngIf="visibleSection === 'products'">
