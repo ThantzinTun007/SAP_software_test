@@ -2,6 +2,10 @@
   padding: 80px 0px;
 }
 
+.uppderContainer {
+  display: block;
+}
+
 .upperPartContainer {
   display: flex;
   justify-content: space-between;
@@ -291,4 +295,44 @@
   opacity: 0.8;
   line-height: 25px;
   margin-bottom: 17px;
+}
+
+/* for width 980px */
+
+.lowerPartContainer {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  /* background-color: #0033cc; */
+}
+
+
+.lowerPartContainer span{
+  font-size: 17px;
+  color: rgb(18, 79, 220);
+  margin-right: 30px;
+}
+
+.lowerPartContainer h5 {
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.content{
+  width: 100%;
+  height: auto;
+  padding: 30px 0px;
+}
+
+.content a{
+  font-size: 17px;
+  text-decoration: none;
+  color: rgb(16, 62, 160);
+}
+
+@media (max-width: 980px) {
+  .uppderContainer {
+    display: none;
+  }
 }

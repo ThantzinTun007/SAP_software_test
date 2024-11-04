@@ -213,7 +213,7 @@
   font-size: 16px;
 }
 
-.icon-backdrop{
+.icon-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -238,7 +238,7 @@
   padding: 20px;
 }
 
-.locationIcon{
+.locationIcon {
   width: 100px;
   height: auto;
   margin-bottom: 20px;
@@ -268,5 +268,18 @@
 
   .hamburger_icon {
     display: block;
+  }
+
+  .fixed-button {
+    width: 60px;
+    height: 60px;
+    padding: 0px 20px 0px 15px;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 10px;
+  }
+
+  .fixed-button span {
+    display: none;
   }
 }

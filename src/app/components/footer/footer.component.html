@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container uppderContainer">
   <div class="upperPartContainer">
     <div class="frontText">
       <div class="vertical-divider"></div>
@@ -88,6 +88,55 @@
         </p>
       </a>
     </div>
+  </div>
+</div>
+
+<!-- after 980px -->
+<div class="container">
+  <div class="upperPartContainer">
+    <div class="frontText">
+      <div class="vertical-divider"></div>
+      <p>Solutions built for you</p>
+    </div>
+  </div>
+  <div class="lowerPartContainer">
+    <div>
+      <h5 (click)="toggleSection('erp')">
+        <span *ngIf="activeSection !=='erp'"><i class="fa-solid fa-angle-right"></i> </span>  
+        <span *ngIf="activeSection === 'erp'"><i class="fa-solid fa-angle-down"></i></span>
+        Enterprise Resource Planning
+      </h5>
+      <hr>
+      <div *ngIf="activeSection === 'erp'" class="content">
+        <p>SAP S/4HANA Cloud is complete, modular, and award-winning ERP. Embedded with AI and analytics, it can help your business run anywhere, in real-time.</p>
+        <a href="#">Get started with SAP S/4HANA Cloud</a>
+      </div>
+    
+      <h5 (click)="toggleSection('crm')">
+        <span *ngIf="activeSection!=='crm'"><i class="fa-solid fa-angle-right"></i> </span>  
+        <span *ngIf="activeSection === 'crm'"><i class="fa-solid fa-angle-down"></i></span>
+        CRM and Customer Experience
+      </h5>
+      <hr>
+      <div *ngIf="activeSection === 'crm'" class="content">
+        <p>With our CX solutions, you can connect e-commerce, marketing, sales, and service data – and use AI to personalize the customer experience at every touchpoint.</p>
+        <a href="#">Explore CRM and CX solutions </a>
+      </div>
+    
+      <h5 (click)="toggleSection('financial')">
+        <span *ngIf="activeSection!=='financial'"><i class="fa-solid fa-angle-right"></i> </span>  
+        <span *ngIf="activeSection === 'financial'"><i class="fa-solid fa-angle-down"></i></span>
+        Enterprise Resource Planning
+      </h5>
+      <hr>
+      <div *ngIf="activeSection === 'financial'" class="content">
+        <p>SAP S/4HANA Cloud is complete, modular, and award-winning ERP. Embedded with AI and analytics, it can help your business run anywhere, in real-time.</p>
+        <a href="#">Get started with SAP S/4HANA Cloud</a>
+      </div>
+    
+      <!-- Repeat for other sections -->
+    </div>
+    
   </div>
 </div>
 
@@ -314,6 +363,5 @@
     </div>
   </div>
 </div>
-
 
 <app-contact-us></app-contact-us>

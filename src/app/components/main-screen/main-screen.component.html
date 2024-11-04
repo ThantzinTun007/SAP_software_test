@@ -75,8 +75,10 @@
   </div>
 </nav>
 
+<!-- contact us button -->
 <button class="fixed-button">
-  <i class="fa-regular fa-comments"></i>Contact Us
+  <i class="fa-regular fa-comments"></i>
+  <span>Contact us</span>
 </button>
 
 <!-- for body -->
@@ -84,6 +86,7 @@
 
 <!-- for footer -->
 <app-footer></app-footer>
+
 
 <!-- for sidebar menu -->
 <div class="sidebar" [class.open]="isSidebarOpen">
@@ -141,6 +144,8 @@
   <app-explore></app-explore>
 </div>
 
+
+<!-- for search -->
 <div class="menu" *ngIf="isMenuOpen">
   <div class="menu-section">
     <div class="search-container">
