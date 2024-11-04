@@ -49,7 +49,7 @@
       <div class="back_menu_list_container" *ngIf="!isMobileView">
         <div class="back_menu_list">
           <span
-            class="menu_style"
+            class="menu_style explore"
             [ngClass]="{ 'active-color': visibleSection === 'explore' }"
             (click)="toggleSection('explore')"
             >Explore SAP</span
@@ -63,6 +63,10 @@
           <span class="menu_icon_style"
             ><i class="fa-solid fa-circle-info"></i
           ></span>
+          <div class="vertical-divider"></div>
+          <span class="menu_icon_style close-hide-btn">
+            <i class="fa fa-times close_icon" (click)="toggleSidebar()"></i>
+          </span>
         </div>
       </div>
 
@@ -87,19 +91,26 @@
 <!-- for footer -->
 <app-footer></app-footer>
 
-
 <!-- for sidebar menu -->
 <div class="sidebar" [class.open]="isSidebarOpen">
-  <div class="sidebar_header">
-    <span>Menu</span>
-    <i class="fa fa-times close_icon" (click)="toggleSidebar()"></i>
-  </div>
   <a href="#" class="sidebar_item">Products</a>
+  <hr>
   <a href="#" class="sidebar_item">Support</a>
+  <hr>
   <a href="#" class="sidebar_item">Learning</a>
+  <hr>
   <a href="#" class="sidebar_item">Community</a>
+  <hr>
   <a href="#" class="sidebar_item">Partners</a>
+  <hr>
   <a href="#" class="sidebar_item">About</a>
+  <hr>
+  <span
+            class="menu_style explore hidden-explore"
+            [ngClass]="{ 'active-color': visibleSection === 'explore' }"
+            (click)="toggleSection('')"
+            >Explore SAP</span
+          >
 </div>
 
 <!-- for user icon -->
@@ -111,7 +122,7 @@
       <h2>Thank you for your interest in SAP</h2>
     </div>
     <hr />
-    <img src="/assets/logo/location.png" alt="" class="locationIcon">
+    <img src="/assets/logo/location.png" alt="" class="locationIcon" />
     <p>This offering is currently not available in your region.</p>
   </div>
 </div>
@@ -143,7 +154,6 @@
 <div *ngIf="visibleSection === 'explore'">
   <app-explore></app-explore>
 </div>
-
 
 <!-- for search -->
 <div class="menu" *ngIf="isMenuOpen">

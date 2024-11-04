@@ -92,7 +92,7 @@
 </div>
 
 <!-- after 980px -->
-<div class="container">
+<div class="contentContainer">
   <div class="upperPartContainer">
     <div class="frontText">
       <div class="vertical-divider"></div>
@@ -102,41 +102,120 @@
   <div class="lowerPartContainer">
     <div>
       <h5 (click)="toggleSection('erp')">
-        <span *ngIf="activeSection !=='erp'"><i class="fa-solid fa-angle-right"></i> </span>  
-        <span *ngIf="activeSection === 'erp'"><i class="fa-solid fa-angle-down"></i></span>
+        <span *ngIf="activeSection !== 'erp'"
+          ><i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span *ngIf="activeSection === 'erp'"
+          ><i class="fa-solid fa-angle-down"></i
+        ></span>
         Enterprise Resource Planning
       </h5>
-      <hr>
+      <hr />
       <div *ngIf="activeSection === 'erp'" class="content">
-        <p>SAP S/4HANA Cloud is complete, modular, and award-winning ERP. Embedded with AI and analytics, it can help your business run anywhere, in real-time.</p>
+        <p>
+          SAP S/4HANA Cloud is complete, modular, and award-winning ERP.
+          Embedded with AI and analytics, it can help your business run
+          anywhere, in real-time.
+        </p>
         <a href="#">Get started with SAP S/4HANA Cloud</a>
       </div>
-    
+
       <h5 (click)="toggleSection('crm')">
-        <span *ngIf="activeSection!=='crm'"><i class="fa-solid fa-angle-right"></i> </span>  
-        <span *ngIf="activeSection === 'crm'"><i class="fa-solid fa-angle-down"></i></span>
+        <span *ngIf="activeSection !== 'crm'"
+          ><i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span *ngIf="activeSection === 'crm'"
+          ><i class="fa-solid fa-angle-down"></i
+        ></span>
         CRM and Customer Experience
       </h5>
-      <hr>
+      <hr />
       <div *ngIf="activeSection === 'crm'" class="content">
-        <p>With our CX solutions, you can connect e-commerce, marketing, sales, and service data – and use AI to personalize the customer experience at every touchpoint.</p>
+        <p>
+          With our CX solutions, you can connect e-commerce, marketing, sales,
+          and service data – and use AI to personalize the customer experience
+          at every touchpoint.
+        </p>
         <a href="#">Explore CRM and CX solutions </a>
       </div>
-    
+
       <h5 (click)="toggleSection('financial')">
-        <span *ngIf="activeSection!=='financial'"><i class="fa-solid fa-angle-right"></i> </span>  
-        <span *ngIf="activeSection === 'financial'"><i class="fa-solid fa-angle-down"></i></span>
-        Enterprise Resource Planning
+        <span *ngIf="activeSection !== 'financial'"
+          ><i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span *ngIf="activeSection === 'financial'"
+          ><i class="fa-solid fa-angle-down"></i
+        ></span>
+        Human Capital Management
       </h5>
-      <hr>
+      <hr />
       <div *ngIf="activeSection === 'financial'" class="content">
-        <p>SAP S/4HANA Cloud is complete, modular, and award-winning ERP. Embedded with AI and analytics, it can help your business run anywhere, in real-time.</p>
-        <a href="#">Get started with SAP S/4HANA Cloud</a>
+        <p>
+          Embrace the future of work with the next generation of HCM: SAP
+          SuccessFactors solutions for core HR, talent management, employee
+          experience, and more.
+        </p>
+        <a href="#">Explore SAP SuccessFactors solutions </a>
       </div>
-    
-      <!-- Repeat for other sections -->
+
+      <h5 (click)="toggleSection('crm')">
+        <span *ngIf="activeSection !== 'crm'"
+          ><i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span *ngIf="activeSection === 'crm'"
+          ><i class="fa-solid fa-angle-down"></i
+        ></span>
+        CRM and Customer Experience
+      </h5>
+      <hr />
+      <div *ngIf="activeSection === 'crm'" class="content">
+        <p>
+          With our CX solutions, you can connect e-commerce, marketing, sales,
+          and service data – and use AI to personalize the customer experience
+          at every touchpoint.
+        </p>
+        <a href="#">Explore CRM and CX solutions </a>
+      </div>
+      <h5 (click)="toggleSection('crm')">
+        <span *ngIf="activeSection !== 'crm'"
+          ><i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span *ngIf="activeSection === 'crm'"
+          ><i class="fa-solid fa-angle-down"></i
+        ></span>
+        CRM and Customer Experience
+      </h5>
+      <hr />
+      <div *ngIf="activeSection === 'crm'" class="content">
+        <p>
+          With our CX solutions, you can connect e-commerce, marketing, sales,
+          and service data – and use AI to personalize the customer experience
+          at every touchpoint.
+        </p>
+        <a href="#">Explore CRM and CX solutions </a>
+      </div>
+      <h5 (click)="toggleSection('crm')">
+        <span *ngIf="activeSection !== 'crm'"
+          ><i class="fa-solid fa-angle-right"></i>
+        </span>
+        <span *ngIf="activeSection === 'crm'"
+          ><i class="fa-solid fa-angle-down"></i
+        ></span>
+        CRM and Customer Experience
+      </h5>
+      <hr />
+      <div *ngIf="activeSection === 'crm'" class="content">
+        <p>
+          With our CX solutions, you can connect e-commerce, marketing, sales,
+          and service data – and use AI to personalize the customer experience
+          at every touchpoint.
+        </p>
+        <a href="#">Explore CRM and CX solutions </a>
+      </div>
     </div>
-    
+  </div>
+  <div class="backBtn">
+    <button class="btn">View products A-Z</button>
   </div>
 </div>
 
@@ -271,6 +350,7 @@
       <p>What's new</p>
     </div>
 
+    <!-- what new box -->
     <div class="whatNewBox">
       <div class="imageContainer">
         <img src="/assets/images/people-with-phone.avif" alt="" />
@@ -282,6 +362,23 @@
           Streamline app development, automate processes, and break down silos
           with the latest ABAP and generative AI capabilities in SAP Build.
         </h5>
+        <button class="btn btn-primary">Explore SAP Build</button>
+      </div>
+    </div>
+
+    <div class="custom-card what-new-box-hide">
+      <img
+        src="/assets/images/people-with-phone.avif"
+        alt="Consumer products"
+        class="card-image"
+      />
+      <div class="card-content">
+        <h3>App development</h3>
+        <hr />
+        <p>
+          Streamline app development, automate processes, and break down silos
+          with the latest ABAP and generative AI capabilities in SAP Build.
+        </p>
         <button class="btn btn-primary">Explore SAP Build</button>
       </div>
     </div>

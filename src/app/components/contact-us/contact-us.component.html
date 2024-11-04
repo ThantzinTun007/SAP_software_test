@@ -92,5 +92,88 @@
         <a href="">Find Services</a>
       </div>
     </div>
+
+    <!-- for hidden content -->
+
+    <div class="contentContainer">
+      <div>
+        <h5 (click)="toggleSection('financial')">
+          <span *ngIf="activeSection !== 'financial'"
+            ><i class="fa-solid fa-angle-right"></i>
+          </span>
+          <span *ngIf="activeSection === 'financial'"
+            ><i class="fa-solid fa-angle-down"></i
+          ></span>
+          Quick Links
+        </h5>
+        <hr />
+        <div *ngIf="activeSection === 'financial'" class="content">
+          <a href="#">SAP Trust Center</a>
+          <a href="#">Find a Solution</a>
+          <a href="#">Industries</a>
+          <a href="#">Find a Partner</a>
+          <a href="#">Trials and Demos</a>
+          <a href="#">Find Services</a>
+        </div>
+
+        <h5 (click)="toggleSection('crm')">
+          <span *ngIf="activeSection !== 'crm'"
+            ><i class="fa-solid fa-angle-right"></i>
+          </span>
+          <span *ngIf="activeSection === 'crm'"
+            ><i class="fa-solid fa-angle-down"></i
+          ></span>
+          Trending
+        </h5>
+        <hr />
+        <div *ngIf="activeSection === 'crm'" class="content">
+          <a href="#">SAP TechEd </a>
+          <a href="#">Find a Solution </a>
+          <a href="#">What is RISE with SAP? </a>
+          <a href="#">SAP Business AI </a>
+          <a href="#">Sustainability </a>
+          <a href="#">Find Services</a>
+        </div>
+
+        <h5 (click)="toggleSection('crm')">
+          <span *ngIf="activeSection !== 'crm'"
+            ><i class="fa-solid fa-angle-right"></i>
+          </span>
+          <span *ngIf="activeSection === 'crm'"
+            ><i class="fa-solid fa-angle-down"></i
+          ></span>
+          About SAP
+        </h5>
+        <hr />
+        <div *ngIf="activeSection === 'crm'" class="content">
+          <a href="#">Company Information </a>
+          <a href="#">Worldwide Directory </a>
+          <a href="#">Industries </a>
+          <a href="#">News and Press</a>
+          <a href="#">Trials and Demos </a>
+          <a href="#">Find Services</a>
+          <a href="#">Customer Stories </a>
+          <a href="#">Newsletter </a>
+        </div>
+        <h5 (click)="toggleSection('crm')">
+          <span *ngIf="activeSection !== 'crm'"
+            ><i class="fa-solid fa-angle-right"></i>
+          </span>
+          <span *ngIf="activeSection === 'crm'"
+            ><i class="fa-solid fa-angle-down"></i
+          ></span>
+          Site Information
+        </h5>
+        <hr />
+        <div *ngIf="activeSection === 'crm'" class="content">
+          <a href="#">Privacy </a>
+          <a href="#">Find a Solution </a>
+          <a href="#">Industries </a>
+          <a href="#">Find a Partner </a>
+          <a href="#">Trials and Demos </a>
+          <a href="#">Find Services </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

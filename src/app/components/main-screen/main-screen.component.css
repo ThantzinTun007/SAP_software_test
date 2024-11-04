@@ -17,7 +17,7 @@
   bottom: 20px;
   right: 20px;
   padding: 10px 20px;
-  z-index: 2000;
+  z-index: 1900;
 }
 
 .fixed-button i {
@@ -123,11 +123,15 @@
   right: 0;
 }
 
-.sidebar_header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  font-weight: bold;
+.vertical-divider{
+  width: 1px;
+  height: 30px;
+  background-color:#3333338b;
+  display: none;
+}
+
+.close-hide-btn{
+  display: none;
 }
 
 .close_icon {
@@ -135,12 +139,44 @@
   cursor: pointer;
 }
 
-.sidebar_item {
-  padding: 15px 20px;
+.sidebar_search {
+  width: 90%;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 20px ;
+}
+
+.sidebar_item{
+  padding: 2px 20px;
   text-decoration: none;
   color: #333;
-  font-size: 16px;
+  font-size: 15px;
 }
+
+hr{
+  width: 90%;
+  color: #7a79797e;
+}
+
+.hidden-explore{
+  width: 100%;
+  height: 60px;
+  font-size: 15px;
+  color: #f5f6f7;
+  padding: 16px 20px;
+  background-color: #0070F2;
+  position: fixed;
+  bottom: 0;
+  
+}
+
+.hidden-explore:hover{
+  color: white;
+}
+
 
 .front_menu_list {
   display: flex;
@@ -270,6 +306,25 @@
     display: block;
   }
 
+  .explore{
+    display: none;
+  }
+  
+  .hidden-explore{
+    display: block;
+  }
+
+  .search-container input {
+    width: 60%;
+    height: 40px;
+    font-size: 14px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 10px 40px 10px 20px;
+    color: rgba(60, 60, 60, 0.712);
+    box-sizing: border-box;
+  }
+
   .fixed-button {
     width: 60px;
     height: 60px;
@@ -281,5 +336,13 @@
 
   .fixed-button span {
     display: none;
+  }
+
+  .close-hide-btn{
+    display: block;
+  }
+
+  .vertical-divider{
+    display: block;
   }
 }

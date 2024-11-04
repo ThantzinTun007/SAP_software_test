@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './contact-us.component.css'
 })
 export class ContactUsComponent {
+  activeSection: string | null = null;
 
+  toggleSection(section: string) {
+    this.activeSection = this.activeSection === section ? null : section;
+  }
 }

@@ -13,7 +13,7 @@
 }
 
 .frontText {
-  width: 50%;
+  width: 100%;
   display: flex;
 }
 
@@ -61,7 +61,7 @@
 
 .boxStyle {
   width: 45%;
-  height: 200px;
+  height: auto;
   /* border: 1px solid black; */
   padding: 20px;
   cursor: pointer;
@@ -99,6 +99,10 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/* .container{
+  background-color: #0033cc;
+} */
 
 .footerHeader {
   font-weight: 700;
@@ -257,6 +261,10 @@
   align-items: center;
 }
 
+.what-new-box-hide{
+  display: none;
+}
+
 .imageContainer {
   width: 30%;
   height: 240px;
@@ -298,6 +306,10 @@
 }
 
 /* for width 980px */
+.contentContainer {
+  padding: 40px;
+  display: none;
+}
 
 .lowerPartContainer {
   width: 100%;
@@ -306,8 +318,7 @@
   /* background-color: #0033cc; */
 }
 
-
-.lowerPartContainer span{
+.lowerPartContainer span {
   font-size: 17px;
   color: rgb(18, 79, 220);
   margin-right: 30px;
@@ -317,22 +328,100 @@
   font-size: 18px;
   cursor: pointer;
   font-weight: bold;
+  margin: 25px 0px;
 }
 
-.content{
+.content {
   width: 100%;
   height: auto;
-  padding: 30px 0px;
+  padding: 10px 0px 30px;
 }
 
-.content a{
+.content a {
   font-size: 17px;
   text-decoration: none;
   color: rgb(16, 62, 160);
 }
 
-@media (max-width: 980px) {
+.content a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 995px) {
   .uppderContainer {
     display: none;
+  }
+
+  .contentContainer {
+    display: block;
+  }
+
+  .backBtn {
+    display: block;
+    padding-left: 20px;
+  }
+
+  .cardContainer {
+    width: 100%;
+    height: 170vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .custom-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: 500px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+
+  .whatNewBox{
+    display: none;
+  }
+
+  .what-new-box-hide{
+    display: block;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 860px) {
+  .footerBody {
+    width: 55%;
+  }
+
+  .footerBody h3 {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 0px;
+  }
+
+  .footerBody h4 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 780px) {
+  .footerBody {
+    width: 70%;
+  }
+
+  .footerBody h3 {
+    font-size: 18px;
+  }
+
+  .footerBody h4 {
+    font-size: 16px;
   }
 }
