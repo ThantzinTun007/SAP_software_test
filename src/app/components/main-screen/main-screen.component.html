@@ -54,15 +54,18 @@
             (click)="toggleSection('explore')"
             >Explore SAP</span
           >
-          <span class="menu_icon_style" (click)="toggleSearchSection('search')"
+          <span
+            class="menu_icon_style hidden-search-icon"
+            (click)="toggleSearchSection('search')"
             ><i class="fa-solid fa-magnifying-glass"></i
           ></span>
           <span class="menu_icon_style" (click)="openIcon()"
             ><i class="fa-regular fa-user"></i
           ></span>
-          <span class="menu_icon_style"
-            ><i class="fa-solid fa-circle-info"></i
-          ></span>
+
+          <span class="menu_icon_style">
+            <i class="fa-solid fa-globe"></i>
+          </span>
           <div class="vertical-divider"></div>
           <span class="menu_icon_style close-hide-btn">
             <i class="fa fa-times close_icon" (click)="toggleSidebar()"></i>
@@ -93,24 +96,30 @@
 
 <!-- for sidebar menu -->
 <div class="sidebar" [class.open]="isSidebarOpen">
+  <div class="side-search-container">
+    <input type="text" placeholder="Search" class="search-input" />
+    <span class="search-icon"
+      ><i class="fa-solid fa-magnifying-glass"></i
+    ></span>
+  </div>
   <a href="#" class="sidebar_item">Products</a>
-  <hr>
+  <hr />
   <a href="#" class="sidebar_item">Support</a>
-  <hr>
+  <hr />
   <a href="#" class="sidebar_item">Learning</a>
-  <hr>
+  <hr />
   <a href="#" class="sidebar_item">Community</a>
-  <hr>
+  <hr />
   <a href="#" class="sidebar_item">Partners</a>
-  <hr>
+  <hr />
   <a href="#" class="sidebar_item">About</a>
-  <hr>
+  <hr />
   <span
-            class="menu_style explore hidden-explore"
-            [ngClass]="{ 'active-color': visibleSection === 'explore' }"
-            (click)="toggleSection('')"
-            >Explore SAP</span
-          >
+    class="menu_style explore hidden-explore"
+    [ngClass]="{ 'active-color': visibleSection === 'explore' }"
+    (click)="toggleSection('')"
+    >Explore SAP</span
+  >
 </div>
 
 <!-- for user icon -->
