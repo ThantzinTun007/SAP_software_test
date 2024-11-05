@@ -63,9 +63,14 @@
             ><i class="fa-regular fa-user"></i
           ></span>
 
-          <span class="menu_icon_style">
-            <i class="fa-solid fa-globe"></i>
-          </span>
+          <div
+            class="globe-icon"
+            [ngClass]="{ 'active-color': visibleSection === 'country' }"
+            (click)="toggleSection('country')"
+          >
+            <img *ngIf="selectedFlag" [src]="selectedFlag" alt="Country Flag" />
+          </div>
+
           <div class="vertical-divider"></div>
           <span class="menu_icon_style close-hide-btn">
             <i class="fa fa-times close_icon" (click)="toggleSidebar()"></i>
@@ -93,34 +98,6 @@
 
 <!-- for footer -->
 <app-footer></app-footer>
-
-<!-- for sidebar menu -->
-<div class="sidebar" [class.open]="isSidebarOpen">
-  <div class="side-search-container">
-    <input type="text" placeholder="Search" class="search-input" />
-    <span class="search-icon"
-      ><i class="fa-solid fa-magnifying-glass"></i
-    ></span>
-  </div>
-  <a href="#" class="sidebar_item">Products</a>
-  <hr />
-  <a href="#" class="sidebar_item">Support</a>
-  <hr />
-  <a href="#" class="sidebar_item">Learning</a>
-  <hr />
-  <a href="#" class="sidebar_item">Community</a>
-  <hr />
-  <a href="#" class="sidebar_item">Partners</a>
-  <hr />
-  <a href="#" class="sidebar_item">About</a>
-  <hr />
-  <span
-    class="menu_style explore hidden-explore"
-    [ngClass]="{ 'active-color': visibleSection === 'explore' }"
-    (click)="toggleSection('')"
-    >Explore SAP</span
-  >
-</div>
 
 <!-- for user icon -->
 <div class="icon-backdrop" *ngIf="isIconOpen" (click)="openIcon()"></div>
@@ -164,6 +141,22 @@
   <app-explore></app-explore>
 </div>
 
+<!-- for language -->
+<div *ngIf="visibleSection === 'country'">
+  <div class="img_hover">
+    <div class="flag-section">
+      <h3>Choose Your Region</h3>
+      <hr />
+      <ul>
+        <li (click)="onCountrySelect('americas')">Americas</li>
+        <li (click)="onCountrySelect('uk')">United Kingdom</li>
+        <li (click)="onCountrySelect('brazil')">Brazil</li>
+        <li (click)="onCountrySelect('canada')">Canada</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <!-- for search -->
 <div class="menu" *ngIf="isMenuOpen">
   <div class="menu-section">
@@ -173,4 +166,204 @@
       <i class="fa fa-times close_icon" (click)="togglesClose()"></i>
     </div>
   </div>
+</div>
+
+<!-- for sidebar menu -->
+<div class="sidebar" [class.open]="isSidebarOpen">
+  <div class="side-search-container">
+    <input type="text" placeholder="Search" class="search-input" />
+    <span class="search-icon"
+      ><i class="fa-solid fa-magnifying-glass"></i
+    ></span>
+  </div>
+  <div class="d-flex justify-content-between" (click)="isProductSidebar()">
+    <a class="sidebar_item">Products</a>
+    <i class="fa-solid fa-chevron-right"></i>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between" (click)="isSupportSidebar()">
+    <a class="sidebar_item">Support</a>
+    <i class="fa-solid fa-chevron-right"></i>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between" (click)="isLearningSidebar()">
+    <a class="sidebar_item">Learning</a>
+    <i class="fa-solid fa-chevron-right"></i>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between" (click)="isCommunitySidebar()">
+    <a class="sidebar_item">Community</a>
+    <i class="fa-solid fa-chevron-right"></i>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between" (click)="isPartnerSidebar()">
+    <a class="sidebar_item">Partners</a>
+    <i class="fa-solid fa-chevron-right"></i>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between" (click)="isAboutSidebar()">
+    <a class="sidebar_item">About</a>
+    <i class="fa-solid fa-chevron-right"></i>
+  </div>
+
+  <hr />
+  <span
+    class="menu_style explore hidden-explore"
+    [ngClass]="{ 'active-color': visibleSection === 'explore' }"
+    (click)="toggleSection('')"
+    >Explore SAP</span
+  >
+</div>
+
+<!-- for sidebar products -->
+<div class="sidebar" [class.open]="isProductMenu">
+  <div class="products-header">
+    <i class="fa-solid fa-chevron-left" (click)="isProductSidebar()"></i>
+    <h6>Products</h6>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Overview</a>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">By Category</a>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">By Industry</a>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Business Technology Platform </a>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Business Transformation Management</a>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Featured</a>
+  </div>
+
+  <hr />
+</div>
+
+<!-- for support -->
+<div class="sidebar" [class.open]="isSupportMenu">
+  <div class="products-header">
+    <i class="fa-solid fa-chevron-left" (click)="isSupportSidebar()"></i>
+    <h6>Supports</h6>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Overview</a>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Services and Support Offerings</a>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Customer Support Portal</a>
+  </div>
+  <hr />
+</div>
+
+<!-- for learning -->
+<div class="sidebar" [class.open]="isLearningMenu">
+  <div class="products-header">
+    <i class="fa-solid fa-chevron-left" (click)="isLearningSidebar()"></i>
+    <h6>Learning</h6>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Overview</a>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Learning Overview</a>
+  </div>
+  <hr />
+</div>
+
+<!-- for community -->
+<div class="sidebar" [class.open]="isCommunityMenu">
+  <div class="products-header">
+    <i class="fa-solid fa-chevron-left" (click)="isCommunitySidebar()"></i>
+    <h6>Community</h6>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Overview</a>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Community Overview</a>
+  </div>
+  <hr />
+</div>
+
+<!-- for partners -->
+<div class="sidebar" [class.open]="isPartnersMenu">
+  <div class="products-header">
+    <i class="fa-solid fa-chevron-left" (click)="isPartnerSidebar()"></i>
+    <h6>Community</h6>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Overview</a>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Partner Overview</a>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Partner Login</a>
+  </div>
+  <hr />
+</div>
+
+<!-- for about -->
+<div class="sidebar" [class.open]="isAboutMenu">
+  <div class="products-header">
+    <i class="fa-solid fa-chevron-left" (click)="isAboutSidebar()"></i>
+    <h6>About</h6>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Overview</a>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Company Information</a>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Careers </a>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Customer Stories</a>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Events</a>
+  </div>
+
+  <hr />
+  <div class="d-flex justify-content-between">
+    <a href="#" class="sidebar_item">Security and Trust</a>
+  </div>
+
+  <hr />
 </div>

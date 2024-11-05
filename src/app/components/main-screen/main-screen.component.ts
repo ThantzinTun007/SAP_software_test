@@ -18,7 +18,22 @@ export class MainScreenComponent implements OnInit {
   isBrowser: boolean;
   isMenuOpen: boolean = false;
   isIconOpen: boolean = false;
+  isProductMenu: boolean = false;
+  isSupportMenu: boolean = false;
+  isLearningMenu: boolean = false;
+  isCommunityMenu: boolean = false;
+  isPartnersMenu: boolean = false;
+  isAboutMenu: boolean = false;
   visibleSection: string | null = null;
+
+  countries = {
+    americas: '/assets/images/us-flag.webp',
+    uk: '/assets/images/uk-flag.png',
+    brazil: '/assets/images/brazil.png',
+    canada: '/assets/images/Canada-flag.png',
+  };
+
+  selectedFlag: string = this.countries.americas;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     this.isBrowser = isPlatformBrowser(this.platformId);
@@ -37,6 +52,12 @@ export class MainScreenComponent implements OnInit {
 
   toggleSidebar(): void {
     this.isSidebarOpen = !this.isSidebarOpen;
+    // if (this.isSidebarOpen) {
+    //   document.body.classList.add('no-scroll');
+    // } else {
+    //   document.body.classList.remove('no-scroll');
+    // }
+
     this.isMobileView = !this.isMobileView;
   }
 
@@ -53,7 +74,35 @@ export class MainScreenComponent implements OnInit {
     this.isMenuOpen = section === 'search';
   }
 
+  onCountrySelect(selectedCountry: 'americas' | 'uk' | 'brazil' | 'canada') {
+    this.selectedFlag = this.countries[selectedCountry];
+  }
+
   togglesClose() {
     this.isMenuOpen = false;
+  }
+
+  isProductSidebar() {
+    this.isProductMenu = !this.isProductMenu;
+  }
+
+  isSupportSidebar() {
+    this.isSupportMenu = !this.isSupportMenu;
+  }
+
+  isLearningSidebar() {
+    this.isLearningMenu = !this.isLearningMenu;
+  }
+
+  isCommunitySidebar() {
+    this.isCommunityMenu = !this.isCommunityMenu;
+  }
+
+  isPartnerSidebar() {
+    this.isPartnersMenu = !this.isPartnersMenu;
+  }
+
+  isAboutSidebar() {
+    this.isAboutMenu = !this.isAboutMenu;
   }
 }
