@@ -20,19 +20,16 @@
   margin-bottom: 10px;
 }
 
-.menu-section ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
 
-.menu-section li {
+.menu-section a {
   font-size: 13px;
+  text-decoration: none;
+  display: block;
   margin-bottom: 15px;
   color: #3a3939;
   cursor: pointer;
 }
 
-.menu-section li:hover {
+.menu-section a:hover {
   text-decoration: underline;
 }

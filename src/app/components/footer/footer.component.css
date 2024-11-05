@@ -261,7 +261,7 @@
   align-items: center;
 }
 
-.what-new-box-hide{
+.what-new-box-hide {
   display: none;
 }
 
@@ -386,11 +386,11 @@
     font-family: Arial, sans-serif;
   }
 
-  .whatNewBox{
+  .whatNewBox {
     display: none;
   }
 
-  .what-new-box-hide{
+  .what-new-box-hide {
     display: block;
     margin-bottom: 50px;
   }
