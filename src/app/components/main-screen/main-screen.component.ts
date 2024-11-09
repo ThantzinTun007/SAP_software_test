@@ -52,11 +52,6 @@ export class MainScreenComponent implements OnInit {
 
   toggleSidebar(): void {
     this.isSidebarOpen = !this.isSidebarOpen;
-    // if (this.isSidebarOpen) {
-    //   document.body.classList.add('no-scroll');
-    // } else {
-    //   document.body.classList.remove('no-scroll');
-    // }
 
     this.isMobileView = !this.isMobileView;
   }
