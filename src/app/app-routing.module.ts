@@ -5,6 +5,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { SupportScreenComponent } from './components/support-screen/support-screen.component';
 import { LearningScreenComponent } from './components/learning-screen/learning-screen.component';
 import { CommunityScreenComponent } from './components/community-screen/community-screen.component';
+import { PartnersScreenComponent } from './components/partners-screen/partners-screen.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'category', component: CategoryComponent},
   {path: 'support', component: SupportScreenComponent},
   {path: 'learning', component: LearningScreenComponent},
-  {path: 'community', component: CommunityScreenComponent}
+  {path: 'community', component: CommunityScreenComponent},
+  {path: 'partner', component: PartnersScreenComponent}
 ];
 
 @NgModule({
