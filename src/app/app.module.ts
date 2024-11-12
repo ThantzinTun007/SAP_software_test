@@ -18,6 +18,8 @@ import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { CategoryComponent } from './components/category/category.component';
+import { SupportScreenComponent } from './components/support-screen/support-screen.component';
+import { LearningScreenComponent } from './components/learning-screen/learning-screen.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { CategoryComponent } from './components/category/category.component';
     FooterComponent,
     ContactUsComponent,
     CategoryComponent,
+    SupportScreenComponent,
+    LearningScreenComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideClientHydration()],
