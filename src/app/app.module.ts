@@ -20,6 +20,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { CategoryComponent } from './components/category/category.component';
 import { SupportScreenComponent } from './components/support-screen/support-screen.component';
 import { LearningScreenComponent } from './components/learning-screen/learning-screen.component';
+import { CommunityScreenComponent } from './components/community-screen/community-screen.component';
+import { PartnersScreenComponent } from './components/partners-screen/partners-screen.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { LearningScreenComponent } from './components/learning-screen/learning-s
     CategoryComponent,
     SupportScreenComponent,
     LearningScreenComponent,
+    CommunityScreenComponent,
+    PartnersScreenComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideClientHydration()],
