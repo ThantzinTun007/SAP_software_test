@@ -87,10 +87,27 @@
 </nav>
 
 <!-- contact us button -->
-<button class="fixed-button">
+<button class="fixed-button" (click)="toggleContactUs()" [ngClass]="{'active': isContact}">
   <i class="fa-regular fa-comments"></i>
   <span>Contact us</span>
 </button>
+
+<!-- contact us box -->
+<div class="contact-us-box" *ngIf="isContact">
+  <div class="top-layer"></div>
+  <div class="buttom-layer">
+    <div>
+      <i class="fa-regular fa-comments"></i>
+      <a href="#" class="ms-2">Chat now</a>
+      <p>Get live help and chat with an SAP representative.</p>
+    </div>
+    <div>
+      <i class="fa-regular fa-envelope"></i>
+      <a href="#" class="ms-2">Contact us</a>
+      <p>Send us your comments,questions,or feedback.</p>
+    </div>
+  </div>
+</div>
 
 <!-- for body -->
 <app-body> </app-body>

@@ -25,6 +25,7 @@ export class MainScreenComponent implements OnInit {
   isPartnersMenu: boolean = false;
   isAboutMenu: boolean = false;
   visibleSection: string | null = null;
+  isContact: boolean = false;
 
   countries = {
     americas: '/assets/images/us-flag.webp',
@@ -99,5 +100,9 @@ export class MainScreenComponent implements OnInit {
 
   isAboutSidebar() {
     this.isAboutMenu = !this.isAboutMenu;
+  }
+
+  toggleContactUs() {
+    this.isContact = !this.isContact;
   }
 }
