@@ -22,6 +22,7 @@ import { SupportScreenComponent } from './components/support-screen/support-scre
 import { LearningScreenComponent } from './components/learning-screen/learning-screen.component';
 import { CommunityScreenComponent } from './components/community-screen/community-screen.component';
 import { PartnersScreenComponent } from './components/partners-screen/partners-screen.component';
+import { AboutScreenComponent } from './components/about-screen/about-screen.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { PartnersScreenComponent } from './components/partners-screen/partners-s
     LearningScreenComponent,
     CommunityScreenComponent,
     PartnersScreenComponent,
+    AboutScreenComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideClientHydration()],

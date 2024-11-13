@@ -6,6 +6,7 @@ import { SupportScreenComponent } from './components/support-screen/support-scre
 import { LearningScreenComponent } from './components/learning-screen/learning-screen.component';
 import { CommunityScreenComponent } from './components/community-screen/community-screen.component';
 import { PartnersScreenComponent } from './components/partners-screen/partners-screen.component';
+import { AboutScreenComponent } from './components/about-screen/about-screen.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'support', component: SupportScreenComponent},
   {path: 'learning', component: LearningScreenComponent},
   {path: 'community', component: CommunityScreenComponent},
-  {path: 'partner', component: PartnersScreenComponent}
+  {path: 'partner', component: PartnersScreenComponent},
+  {path: 'about', component: AboutScreenComponent}
 ];
 
 @NgModule({
